@@ -1,0 +1,14 @@
+# Not necessary folders
+poc1
+
+# Environment variables
+.env
+
+# igmoring mac files
+.DS_Store
+
+#ignoring jupyter notebooks
+*.ipynb
+
+#skip mp4 file
+*.mp4
