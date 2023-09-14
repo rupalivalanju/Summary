@@ -1,12 +1,15 @@
 import openai
 import os
-from dotenv import load_dotenv  
+from dotenv import load_dotenv, find_dotenv
 
 # Set your OpenAI API key environment
-load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
+#load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
 
-if "OPENAI_API_KEY" in os.environ:
-    openai.api_key = os.getenv("OPENAI_API_KEY")
+_ = load_dotenv(find_dotenv())
+openai.api_key = os.environ["OPENAI_API_KEY"]
+
+# if "OPENAI_API_KEY" in os.environ:
+#     openai.api_key = os.getenv("OPENAI_API_KEY")
 
  
 audio_file= open("/Users/rupalivalanju/Documents/Practice/summary/video.mp4", "rb")
